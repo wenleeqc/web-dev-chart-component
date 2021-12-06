@@ -24,13 +24,15 @@ class App extends Component {
         // helper function to sum up time data for each site visited
         const addTime = (obj) => {
           const values = Object.values(obj);
+          console.log('raw values', values)
           let sum = 0;
-          for(let i=2; i < values.length; i++) {
+          for(let i=1; i < values.length; i++) {
               sum = sum + values[i];
           }
           return sum;
         }
 
+        console.log('raw results', result)
         // build map of site and time spent
         let store = []; // data store
         result.forEach(element => {
